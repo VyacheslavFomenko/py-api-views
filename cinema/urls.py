@@ -10,7 +10,11 @@ from cinema.views import (
     ActorDetailView,
 )
 
-cinema_hall_list = CinemaHallListview.as_view(actions={"get": "list", "post": "create"})
+cinema_hall_list = CinemaHallListview.as_view(
+    actions={
+        "get": "list",
+        "post": "create"}
+)
 cinema_hall_detail = CinemaHallListview.as_view(
     actions={
         "get": "retrieve",
