@@ -52,12 +52,12 @@ class GenreDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ActorList(generics.CreateAPIView):
+class ActorList(generics.ListCreateAPIView):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
 
 
-class ActorDetail(generics.RetrieveAPIView):
+class ActorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
 
